@@ -1,8 +1,16 @@
-[ 25.10.2015 - 21:15:06 ]
+[ 26.10.2015 - 01:31:15 ]
     (MSG) [2] in SMILExtract : openSMILE starting!
-[ 25.10.2015 - 21:15:06 ]
-    (MSG) [2] in SMILExtract : config file is: config/demo/demo1-energy.conf
-[ 25.10.2015 - 21:15:06 ]
+[ 26.10.2015 - 01:31:15 ]
+    (MSG) [2] in SMILExtract : config file is: openSMILE-2.1.0/config/demo/demo1_energy.conf
+[ 26.10.2015 - 01:31:15 ]
     (MSG) [2] in cComponentManager : successfully registered 95 component types.
-[ 25.10.2015 - 21:15:06 ]
-    (ERROR) [1] in configManager : cFileConfigReader::openInput : cannot open input file 'config/demo/demo1-energy.conf'!
+==> LEVEL 'wave'  +++  Buffersize(frames) = 16001  +++  nReaders = 1
+==> LEVEL 'waveframes'  +++  Buffersize(frames) = 3  +++  nReaders = 1
+==> LEVEL 'energy'  +++  Buffersize(frames) = 3  +++  nReaders = 1
+[ 26.10.2015 - 01:31:15 ]
+    (MSG) [2] in cComponentManager : successfully finished createInstances
+                                 (4 component instances were finalised, 1 data memories were finalised)
+[ 26.10.2015 - 01:31:15 ]
+    (MSG) [2] in cComponentManager : starting single thread processing loop
+[ 26.10.2015 - 01:31:15 ]
+    (MSG) [2] in cComponentManager : Processing finished! System ran for 1001 ticks.
