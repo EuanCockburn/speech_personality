@@ -30,7 +30,7 @@ nThreads = 1
 [waveSource:cWaveSource]
 writer.dmLevel = wave
 basePeriod = -1
-filename = \cm[inputfile (I): file name of the input wave file]
+filename = \cm [inputfile (I): file name of the input wave file]
 properTimestamps = 0
 monoMixdown = 1
 // segmentList[] = 
@@ -82,7 +82,7 @@ ebiasSquare = 0
 [csvSink:cCsvSink]
 reader.dmLevel = energy
 errorOnNoOutput = 0
-filename = \cm[outputfile (O): file name of the output CSV file]
+filename = \cm [outputfile (O): file name of the output CSV file]
 delimChar = ;
 append = 0
 timestamp = 1
