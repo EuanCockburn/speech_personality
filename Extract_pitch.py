@@ -95,8 +95,7 @@ def Averageof(Data):
 
 # Plot a histogram
 def plotHistogram(Data, Title, Scale):
-	print Data
-	plt.hist(len(Data), bins = 20)
+	plt.hist(Data, bins = 50)
 	plt.title(Title)
 	plt.xlabel(Scale)
 	plt.ylabel("Frequency")
