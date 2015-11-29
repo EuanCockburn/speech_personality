@@ -1,10 +1,10 @@
-[ 22.11.2015 - 18:41:15 ]
+[ 29.11.2015 - 16:20:30 ]
     (MSG) [2] in SMILExtract : openSMILE starting!
-[ 22.11.2015 - 18:41:15 ]
-    (MSG) [2] in SMILExtract : config file is: openSMILE-2.1.0/config/prosodyShs.conf
-[ 22.11.2015 - 18:41:15 ]
+[ 29.11.2015 - 16:20:30 ]
+    (MSG) [2] in SMILExtract : config file is: MyConfig/prosodyShs.conf
+[ 29.11.2015 - 16:20:30 ]
     (MSG) [2] in cComponentManager : successfully registered 95 component types.
-[ 22.11.2015 - 18:41:15 ]
+[ 29.11.2015 - 16:20:30 ]
     (WARN) [2] in instance 'shs' : Requested input field matching pattern '*Mag_logScale*' not found, check your config! Defaulting to use first field. Available fields:
   Field name & dimension:
     pcm_fftMag_octScale 257
@@ -99,10 +99,10 @@
        1.       : voicingFinalUnclipped_sma
        2.       : pcm_loudness_sma
      Fields with info struct set: (index (range) : info struct size in bytes (dt = datatype))
-[ 22.11.2015 - 18:41:15 ]
+[ 29.11.2015 - 16:20:30 ]
     (MSG) [2] in cComponentManager : successfully finished createInstances
                                  (11 component instances were finalised, 1 data memories were finalised)
-[ 22.11.2015 - 18:41:15 ]
+[ 29.11.2015 - 16:20:30 ]
     (MSG) [2] in cComponentManager : starting single thread processing loop
-[ 22.11.2015 - 18:41:15 ]
+[ 29.11.2015 - 16:20:30 ]
     (MSG) [2] in cComponentManager : Processing finished! System ran for 1001 ticks.
