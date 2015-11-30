@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 # Plot a histogram
 def plotHistogram(Data, Title, Scale):
-	plt.hist(Data, bins = 300)
+	plt.hist(Data, bins = 150)
 	plt.title(Title)
 	plt.xlabel(Scale)
 	plt.ylabel("Frequency")
