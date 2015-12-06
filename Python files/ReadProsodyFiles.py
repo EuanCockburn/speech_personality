@@ -10,7 +10,7 @@ def readProsodyShs():
 	# Initialse list to hold names of csv files
 	CSVfiles = []
 	# Read all the CSV files in ProsodyShs
-	for f in glob.glob('/home/euan/Documents/Speech_personality/speech_personality/CSVs/ProsodyShs/*.csv'):
+	for f in glob.glob('/home/euan/Documents/university/year4/independant_project/speech_personality/CSVs/ProsodyShs/*.csv'):
 		CSVfiles.append(f)
 	
 	# Lists to data from CSV files
