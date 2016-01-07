@@ -55,4 +55,4 @@ def readProsodyShs():
 		String2Float(entry)
 
 	# Return the lists
-	return F0final_sma, VoicingFinalUnclipped_sma, pcm_loudness_sma
+	return VoicingFinalUnclipped_sma, pcm_loudness_sma

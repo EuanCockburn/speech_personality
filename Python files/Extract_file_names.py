@@ -10,7 +10,7 @@ def getfilenames():
     files = []
 
     # Retrieve all .wav files
-    for f in glob.glob('/home/euan/Documents/Speech_personality/speech_personality/SSPNet-Speaker-Personality-Corpus/Audio_clips/*.wav'):
+    for f in glob.glob('/home/euan/Documents/university/year4/independant_project/speech_personality/SSPNet-Speaker-Personality-Corpus/Audio_clips/*.wav'):
         files.append(f)
     
     return files

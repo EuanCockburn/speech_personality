@@ -9,6 +9,6 @@ def RunProsodyShs(files):
     # For each file
     for f in range(len(files)):
         # Create bash command
-        bashCommand = "./home/euan/Documents/Speech_personality/speech_personality/SMILExtract -C MyConfig/prosodyShs.conf -I " + files[f] + " -O /home/euan/Documents/Speech_personality/speech_personality/CSVs/ProsodyShs/" + os.path.basename(files[f]) + ".csv"
+        bashCommand = "/home/euan/Documents/university/year4/independant_project/speech_personality/SMILExtract -C /home/euan/Documents/university/year4/independant_project/speech_personality/MyConfig/prosodyShs.conf -I " + files[f] + " -O /home/euan/Documents/university/year4/independant_project/speech_personality/CSVs/ProsodyShs/" + os.path.basename(files[f]) + ".csv"
         # Run bash command
 	os.system(bashCommand)
