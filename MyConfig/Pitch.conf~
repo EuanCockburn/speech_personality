@@ -144,7 +144,6 @@ usePeakToPeakPeriodLength = 0
 shimmerUseRmsAmplitude = 0
 minCC = 0.5
 minNumPeriods = 2
-toRead = maxRead
 
 ;;;;;; Configuration of 'cContourSmoother' ;;;;;
 [smo:cContourSmoother]
