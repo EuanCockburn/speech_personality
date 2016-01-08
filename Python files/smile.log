@@ -1,29 +1,16 @@
-[ 08.01.2016 - 00:00:49 ]
+[ 08.01.2016 - 17:06:26 ]
     (MSG) [2] in SMILExtract : openSMILE starting!
-[ 08.01.2016 - 00:00:49 ]
-    (MSG) [2] in SMILExtract : config file is: /home/euan/Documents/university/year4/independant_project/speech_personality/MyConfig/Loudness.conf
-[ 08.01.2016 - 00:00:49 ]
+[ 08.01.2016 - 17:06:26 ]
+    (MSG) [2] in SMILExtract : config file is: /home/euan/Documents/university/year4/independant_project/speech_personality/MyConfig/Energy.conf
+[ 08.01.2016 - 17:06:26 ]
     (MSG) [2] in cComponentManager : successfully registered 95 component types.
 ==> LEVEL 'wave'  +++  Buffersize(frames) = 16001  +++  nReaders = 1
-     Period(in seconds) = 0.000125 	 frameSize(in seconds) = 0.000125 (last: 0.000000)
-     BlocksizeRead(frames) = 480 	 BlocksizeWrite(frames) = 8000
-     Number of elements: 1 	 Number of fields: 1
 ==> LEVEL 'waveframes'  +++  Buffersize(frames) = 3  +++  nReaders = 1
-     Period(in seconds) = 0.010000 	 frameSize(in seconds) = 0.050000 (last: 0.000000)
-     BlocksizeRead(frames) = 1 	 BlocksizeWrite(frames) = 1
-     Number of elements: 400 	 Number of fields: 1
-==> LEVEL 'intens'  +++  Buffersize(frames) = 6  +++  nReaders = 1
-     Period(in seconds) = 0.010000 	 frameSize(in seconds) = 0.050000 (last: 0.000000)
-     BlocksizeRead(frames) = 4 	 BlocksizeWrite(frames) = 1
-     Number of elements: 1 	 Number of fields: 1
-==> LEVEL 'smo'  +++  Buffersize(frames) = 3  +++  nReaders = 1
-     Period(in seconds) = 0.010000 	 frameSize(in seconds) = 0.050000 (last: 0.000000)
-     BlocksizeRead(frames) = 1 	 BlocksizeWrite(frames) = 1
-     Number of elements: 1 	 Number of fields: 1
-[ 08.01.2016 - 00:00:49 ]
+==> LEVEL 'energy'  +++  Buffersize(frames) = 3  +++  nReaders = 1
+[ 08.01.2016 - 17:06:26 ]
     (MSG) [2] in cComponentManager : successfully finished createInstances
-                                 (5 component instances were finalised, 1 data memories were finalised)
-[ 08.01.2016 - 00:00:49 ]
+                                 (4 component instances were finalised, 1 data memories were finalised)
+[ 08.01.2016 - 17:06:26 ]
     (MSG) [2] in cComponentManager : starting single thread processing loop
-[ 08.01.2016 - 00:00:49 ]
-    (MSG) [2] in cComponentManager : Processing finished! System ran for 1001 ticks.
+[ 08.01.2016 - 17:06:26 ]
+    (MSG) [2] in cComponentManager : Processing finished! System ran for 999 ticks.

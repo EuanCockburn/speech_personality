@@ -9,16 +9,20 @@ def RetrievePitch(Pitch, Jitter):
     Pitch_noZero = []
     for Values in Pitch:
 	Pitch_noZero.append(removeZero(Values[:]))
-    
+    print "pitch no Zero"
     Jitter_noZero = []
     for Values in Jitter:
 	Jitter_noZero.append(removeZero(Values[:]))
-
+    print "Jitter no Zero"
     # Get the average of the F0 and jitter values
     Pitch_Avg = []
     for Values in Pitch_noZero:
-	    Pitch_Avg.append(Averageof(Values[:]))
+	Pitch_Avg.append(Averageof(Values[:]))
 
-    return Pitch_Avg
+    Jitter_Avg = []
+    for Values in Jitter_noZero:
+	Jitter_Avg.append(Averageof(Values[:]))
+
+    return Pitch_Avg, Jitter_Avg
 
 

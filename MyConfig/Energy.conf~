@@ -41,12 +41,9 @@ outFieldName = pcm
 [framer:cFramer]
 reader.dmLevel = wave
 writer.dmLevel = waveframes
-// nameAppend = 
 copyInputName = 1
 allowLastFrameIncomplete = 0
 frameMode = fixed
-// frameListFile = 
-// frameList = 
 frameSize = 0.050000
 frameStep = 0.010000
 frameCenterSpecial = left

@@ -9,5 +9,7 @@ def RetrieveEnergy(EnergyData):
     energyAvg = []
     for Values in EnergyData:
 	    energyAvg.append(Averageof(Values[:]))
-
+	    for entry in Values:
+		if entry < 0:
+			print entry
     return energyAvg

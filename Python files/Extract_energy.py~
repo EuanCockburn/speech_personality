@@ -4,7 +4,7 @@ __author__ = 'Euan Cockburn'
 
 from Utility import *
 
-def RetreiveEnergy(EnergyData):
+def RetrieveEnergy(EnergyData):
     # Get the average of the loudness values
     energyAvg = []
     for Values in EnergyData:

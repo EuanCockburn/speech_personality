@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 
 # Plot a histogram
 def plotHistogram(Data, Title, Scale):
-	plt.hist(Data, bins = 50)
+	plt.hist(Data, bins = 250)
 	plt.title(Title)
 	plt.xlabel(Scale)
 	plt.ylabel("Frequency")
-	plt.savefig("/home/euan/Documents/Speech_personality/speech_personality/Plots/" + Title +".png")
+	plt.savefig("/home/euan/Documents/university/year4/independant_project/speech_personality/Plots/" + Title +".png")

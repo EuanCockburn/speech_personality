@@ -22,19 +22,20 @@ filenames = getfilenames()
 #RunPitch(filenames)
 
 # Run loudness extraction
-RunLoudness(filenames)
+#RunLoudness(filenames)
 
 # Run the energy file
-#RunEnergyConfig(filenames)
+RunEnergyConfig(filenames)
 
 # Read the data from Loudness CSV files
 Loudness = readLoudness()
 # Read the data from energy CSV files
 Energy = readEnergy()
 # Read the data from the pitch files
-#Pitch, jitter = readPitch()
+Pitch, jitter = readPitch()
+
 # Extract the averaged pitch and pitch jitter from the Pitch data files
-#Pitch_avg, jitter_avg = RetrievePitch(Pitch, jitter)
+Pitch_avg, jitter_avg = RetrievePitch(Pitch, jitter)
 
 # Extract the averaged loudness from the Prosody data files
 Loudness_avg = RetrieveLoudness(Loudness)
@@ -43,10 +44,10 @@ Loudness_avg = RetrieveLoudness(Loudness)
 Energy_avg = RetrieveEnergy(Energy)
 
 # Plot the histogram of the pitch
-#plotHistogram(Pitch_avg, "Natural Frequency", "Hz")
+plotHistogram(Pitch_avg, "Natural Frequency", "Hz")
 plotHistogram(Loudness_avg, "loudness", " ")
 plotHistogram(Energy_avg, "Energy", " ")
-#plotHistogram(jitter_avg, "Jitter", " ")
+plotHistogram(jitter_avg, "Jitter", " ")
 
 
 

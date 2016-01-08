@@ -20,7 +20,7 @@ instance[smooth].type = cPitchSmoother
 instance[smo].type = cContourSmoother
 instance[jit].type = cPitchJitter
 instance[csvSink].type = cCsvSink
-printLevelStats = 1
+printLevelStats = 3
 nThreads = 1
 
 ;;;;;;;;;;;;;;;;;;;;;;;Component configuration;;;;;;;;;;;;;;;;;;;
@@ -67,6 +67,7 @@ writer.dmLevel = fftc
 [fftmp:cFFTmagphase]
 reader.dmLevel = fftc
 writer.dmLevel = fftmag
+magnitude = 1
 
 ;;;;; Configuration of 'cSpecScale' ;;;;;
 [scale:cSpecScale]
@@ -89,6 +90,7 @@ auditoryWeighting = 1
 reader.dmLevel = hps
 writer.dmLevel = pitchShs
 copyInputName = 1
+F0raw = 0
 processArrayFields = 0
 maxPitch = 2000
 minPitch = 0
