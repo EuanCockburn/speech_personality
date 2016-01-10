@@ -19,10 +19,10 @@ from Extract_energy import *
 filenames = getfilenames()
 
 # Run pitch extraction configuration file on .wav files
-#RunPitch(filenames)
+RunPitch(filenames)
 
 # Run loudness extraction
-#RunLoudness(filenames)
+RunLoudness(filenames)
 
 # Run the energy file
 RunEnergyConfig(filenames)

@@ -1,16 +1,16 @@
-[ 08.01.2016 - 17:06:26 ]
+[ 10.01.2016 - 20:34:37 ]
     (MSG) [2] in SMILExtract : openSMILE starting!
-[ 08.01.2016 - 17:06:26 ]
+[ 10.01.2016 - 20:34:37 ]
     (MSG) [2] in SMILExtract : config file is: /home/euan/Documents/university/year4/independant_project/speech_personality/MyConfig/Energy.conf
-[ 08.01.2016 - 17:06:26 ]
+[ 10.01.2016 - 20:34:37 ]
     (MSG) [2] in cComponentManager : successfully registered 95 component types.
 ==> LEVEL 'wave'  +++  Buffersize(frames) = 16001  +++  nReaders = 1
 ==> LEVEL 'waveframes'  +++  Buffersize(frames) = 3  +++  nReaders = 1
 ==> LEVEL 'energy'  +++  Buffersize(frames) = 3  +++  nReaders = 1
-[ 08.01.2016 - 17:06:26 ]
+[ 10.01.2016 - 20:34:37 ]
     (MSG) [2] in cComponentManager : successfully finished createInstances
                                  (4 component instances were finalised, 1 data memories were finalised)
-[ 08.01.2016 - 17:06:26 ]
+[ 10.01.2016 - 20:34:37 ]
     (MSG) [2] in cComponentManager : starting single thread processing loop
-[ 08.01.2016 - 17:06:26 ]
+[ 10.01.2016 - 20:34:38 ]
     (MSG) [2] in cComponentManager : Processing finished! System ran for 999 ticks.
