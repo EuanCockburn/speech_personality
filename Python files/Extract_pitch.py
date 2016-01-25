@@ -4,7 +4,7 @@ __author__ = 'Euan Cockburn'
 
 from Utility import *
 
-def RetrievePitch(Pitch, Jitter):
+def RetrievePitch(Pitch, Jitter, Shimmer, Formant1, Formant2, Formant3):
     # Remove zeros from the F0 and jitter values
     Pitch_noZero = []
     for Values in Pitch:
@@ -21,6 +21,26 @@ def RetrievePitch(Pitch, Jitter):
     for Values in Jitter_noZero:
 	Jitter_Avg.append(Averageof(Values[:]))
 
-    return Pitch_Avg, Jitter_Avg
+    Shimmer_noZero = []
+    for Values in Shimmer_noZero:
+	Shimmer_noZero.append(removeZero(Values[:]))
+
+    Shimmer_Avg = []
+    for Values in Shimmer_noZero:
+	Shimmer_Avg.append(Averageof(Values[:]))
+
+    Formant1_Avg = []
+    Formant2_Avg = []
+    Formant3_Avg = []
+    for Values in Formant1:
+	Formant1_Avg.append(Averageof(Values[:]))
+
+    for Values in Formant2:
+	Formant2_Avg.append(Averageof(Values[:]))
+    
+    for Values in Formant3:
+	Formant3_Avg.append(Averageof(Values[:]))
+
+    return Pitch_Avg, Jitter_Avg, Shimmer_Avg, Formant1_Avg, Formant2_Avg, Formant3_Avg
 
 

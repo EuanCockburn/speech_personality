@@ -14,11 +14,17 @@ instance[framer].type = cFramer
 instance[win].type = cWindower
 instance[fft].type=cTransformFFT
 instance[fftmp].type=cFFTmagphase
+instance[acf].type = cAcf
+instance[cep].type = cAcf
+instance[pitchacf].type = cPitchACF
 instance[scale].type = cSpecScale
 instance[pitchShs].type = cPitchShs
 instance[smooth].type = cPitchSmoother
 instance[smo].type = cContourSmoother
 instance[jit].type = cPitchJitter
+instance[lpc].type = cLpc
+instance[formant].type = cFormantLpc
+instance[formantsmooth].type = cFormantSmoother
 instance[csvSink].type = cCsvSink
 printLevelStats = 3
 nThreads = 1
@@ -85,6 +91,32 @@ specSmooth = 1
 specEnhance = 1
 auditoryWeighting = 1
 
+;;;;; Cofiguration of 'cAcf's ;;;;;
+[acf:cAcf]
+reader.dmLevel=hps
+writer.dmLevel=acf
+
+[cep:cAcf]
+reader.dmLevel=hps
+writer.dmLevel=cepstrum
+cepstrum=1
+
+;;;;; Configuration of 'cPitchACF' ;;;;;
+[pitchacf:cPitchACF]
+reader.dmLevel = acf;cepstrum
+writer.dmLevel = pitchACF
+// nameAppend =
+copyInputName = 1
+processArrayFields = 0
+maxPitch = 2000
+voiceProb = 1
+voiceQual = 0
+HNR = 1
+F0 = 1
+F0raw = 0
+F0env = 0
+voicingCutoff = 0.700000
+
 ;;;;; Configuration of 'cPitchShs' ;;;;;
 [pitchShs:cPitchShs]
 reader.dmLevel = hps
@@ -110,7 +142,7 @@ compressionFactor = 0.850000
 
 ;;;;; Configuration of 'cPitchSmoother' ;;;;;
 [smooth:cPitchSmoother]
-reader.dmLevel = pitchShs
+reader.dmLevel = pitchACF
 writer.dmLevel = pitch
 copyInputName = 1
 processArrayFields = 0
@@ -131,25 +163,54 @@ voicingClip = 0
 [jit:cPitchJitter]
 reader.dmLevel = wave
 writer.dmLevel = jitter
+// nameAppend =
 copyInputName = 1
 F0reader.dmLevel = pitch
 F0field = F0final
 searchRangeRel = 0.200000
 jitterLocal = 1
+jitterDDP = 1
 jitterLocalEnv = 0
 jitterDDPEnv = 0
-shimmerLocal = 0
+shimmerLocal = 1
 shimmerLocalEnv = 0
 onlyVoiced = 0
+;periodLengths = 0
+;periodStarts = 0
 inputMaxDelaySec = 1
 usePeakToPeakPeriodLength = 0
 shimmerUseRmsAmplitude = 0
 minCC = 0.5
 minNumPeriods = 2
 
+;;;;; Configuration of 'cLpc' ;;;;;
+[lpc:cLpc]
+reader.dmLevel = waveframes
+saveRefCoeff = 0
+writer.dmLevel = lpc
+p=10
+
+;;;;; Configuration of 'cFormantLpc' ;;;;;
+[formant:cFormantLpc]
+reader.dmLevel = lpc
+writer.dmLevel = formants
+maxF = 6000
+minF = 0
+nFormants = 3
+copyInputName = 1
+saveBandwidths = 1
+
+;;;;;; Configuration of 'cFormantSmoother' ;;;;;
+[formantsmooth:cFormantSmoother]
+reader.dmLevel = formants
+writer.dmLevel = smofor
+copyInputName = 1
+nameAppend = 1
+bandwidths = 1
+
 ;;;;;; Configuration of 'cContourSmoother' ;;;;;
 [smo:cContourSmoother]
-reader.dmLevel = pitch;jitter
+reader.dmLevel = pitch;jitter;smofor
 writer.dmLevel = smo
 copyInputName = 1
 noPostEOIprocessing = 0
@@ -160,4 +221,3 @@ smaWin = 3
 reader.dmLevel=smo
 filename=\cm[output(O){pitch.csv}:output csv file for pitch data]
 append=0
-
