@@ -1,8 +1,0 @@
-[ 25.10.2015 - 21:19:40 ]
-    (MSG) [2] in SMILExtract : openSMILE starting!
-[ 25.10.2015 - 21:19:40 ]
-    (MSG) [2] in SMILExtract : config file is: config/demo/demo1-energy.conf
-[ 25.10.2015 - 21:19:40 ]
-    (MSG) [2] in cComponentManager : successfully registered 95 component types.
-[ 25.10.2015 - 21:19:40 ]
-    (ERROR) [1] in configManager : cFileConfigReader::openInput : cannot open input file 'config/demo/demo1-energy.conf'!

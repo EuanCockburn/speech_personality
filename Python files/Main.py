@@ -2,35 +2,15 @@ __author__ = 'Euan Cockburn'
 'speech personality project'
 'main file for interacting with the program'
 
+from RunExtraction import *
 from Extract_file_names import *
-from Extract_loudness import *
-from ReadLoudness import *
-from RunLoudness import *
-from PlotHistogram import *
-from Extract_pitch import *
-from RunPitch import *
-from ReadPitch import *
-from Extract_loudness import *
-from RunEnergy import *
-from ReadEnergy import *
-from Extract_energy import *
 
 # Retrieve the names of all the .wav files
 filenames = getfilenames()
 
-# Run pitch extraction configuration file on .wav files
-RunPitch(filenames)
+# Run feature extraction configuration file on .wav files
+FeatureExtract(filenames)
 
-# Run loudness extraction
-#RunLoudness(filenames)
-
-# Run the energy file
-#RunEnergyConfig(filenames)
-
-# Read the data from Loudness CSV files
-#Loudness = readLoudness()
-# Read the data from energy CSV files
-#Energy = readEnergy()
 # Read the data from the pitch files
 #Pitch, jitter, shimmer, Formant1, Formant2, Formant3 = readPitch()
 
