@@ -1,25 +1,25 @@
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in SMILExtract : openSMILE starting!
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in SMILExtract : config file is: /home/euan/Documents/university/year4/independant_project/speech_personality/MyConfig/gemaps/eGeMAPSv01a.conf
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in cComponentManager : successfully registered 95 component types.
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in instance 'gemapsv01a_logSpectral' : logSpecFloor = -140.00  (specFloor = 1.000000e-14)
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in instance 'egemapsv01a_logSpectral_flux' : logSpecFloor = -140.00  (specFloor = 1.000000e-14)
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in instance 'lldsink' : No filename given, disabling this sink component.
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in instance 'lldhtksink' : No filename given, disabling this sink component.
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in instance 'csvsink' : No filename given, disabling this sink component.
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in instance 'htksink' : No filename given, disabling this sink component.
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in cComponentManager : successfully finished createInstances
                                  (76 component instances were finalised, 1 data memories were finalised)
-[ 03.02.2016 - 18:00:54 ]
+[ 11.02.2016 - 18:18:57 ]
     (MSG) [2] in cComponentManager : starting single thread processing loop
-[ 03.02.2016 - 18:00:55 ]
+[ 11.02.2016 - 18:18:58 ]
     (MSG) [2] in cComponentManager : Processing finished! System ran for 1011 ticks.
