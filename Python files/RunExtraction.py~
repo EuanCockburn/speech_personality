@@ -5,7 +5,7 @@ __author__ = 'Euan Cockburn'
 import os
 
 # Run the energy configuartion file
-def RunExtraction(files):
+def FeatureExtract(files):
     # For each file
     for f in range(len(files)):
         # Create bash command
