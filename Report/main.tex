@@ -1,0 +1,48 @@
+% This example An LaTeX document showing how to use the l4proj class to
+% write your report. Use pdflatex and bibtex to process the file, creating 
+% a PDF file as output (there is no need to use dvips when using pdflatex).
+
+% Modified by Alexander Morgan 27/10/2015
+
+\documentclass{l4proj}
+
+%=========================================================================
+% define new commands here:
+
+%for in-line comments, you use like this: and this is why \ignore{what am I trying to say?} this is.
+\newcommand{\ignore}[1]{}
+
+%=========================================================================
+
+\begin{document}
+\title{My Dissertation}
+\author{Me}
+\date{25 March 2016}
+\maketitle
+
+%=========================================================================
+
+\begin{abstract}
+
+The project, hurray. A citation \cite{Stellman}.
+
+\end{abstract}
+\educationalconsent
+\tableofcontents
+
+%=========================================================================
+\chapter{Introduction}
+\label{intro}
+
+%------------------------------------------------------------------------------
+\section{Section}
+
+%=========================================================================
+\chapter{Conclusion}
+\label{conclusion}
+
+%=========================================================================
+\bibliographystyle{plain}
+\bibliography{main}
+
+\end{document}
