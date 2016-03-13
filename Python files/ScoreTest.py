@@ -1,0 +1,56 @@
+__author__ = 'Euan Cockburn'
+'speech personality project'
+'file for producing T-tests on data split by meta factors'
+
+import scipy.stats as stat
+import csv
+import numpy as np
+
+def ScoreTest(FeatureKeys, Data):
+	# List of dictionaries with all relevant values to an entry is recorded. These values need to be split according to different keys to 		produce sets for testing
+	f = open('/home/euan/Documents/university/year4/speech_personality/CSVs/Results/scoreResults.csv', 'w')
+	a = csv.writer(f, delimiter = ',')
+	
+	a.writerow(['Feature', 'Extraversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness'])
+
+	for i in xrange(len(FeatureKeys)):
+		Eresult = Scorerun('Extraversion', FeatureKeys[i], Data)
+		Aresult = Scorerun('Agreeableness', FeatureKeys[i], Data)
+		Cresult = Scorerun('Conscientiousness', FeatureKeys[i], Data)
+		Nresult = Scorerun('Neuroticism', FeatureKeys[i], Data)
+		Oresult = Scorerun('Openness', FeatureKeys[i], Data)
+		a.writerow([FeatureKeys[i], Eresult, Aresult, Cresult, Nresult, Oresult])
+
+	f.close()
+
+def Scorerun(Score, Feature, Data):
+
+	# For this corpus meta data willl only ever be split into two
+	option_1 = []
+	option_2 = []
+
+	# Determine what meta data is being used for split.
+	
+	Result_set = []
+	values = []
+	# For each entry in the Data list
+	for i in xrange(len(Data)):
+		# Determine where the data of the feature being examined is to be stored based on the meta value
+		values.append(Data[i][Score])
+
+	# Determine the median value
+	median_value = np.median(values)
+
+	# Split the data into two lists based on where the median lies
+
+	for i in xrange(len(Data)):
+		if Data[i][Score] > median_value:
+			option_1.append(Data[i][Feature])
+		elif Data[i][Score] <= median_value:
+			option_2.append(Data[i][Feature])
+
+	# Now the data has been split into two distinct lists they can be put through a t-test to test the hypothesis that there is no sigificant difference between them.
+
+	result = stat.ttest_ind(option_1, option_2)
+		
+	return format(result[1], 'f')

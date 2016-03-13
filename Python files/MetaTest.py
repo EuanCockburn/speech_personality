@@ -1,0 +1,52 @@
+__author__ = 'Euan Cockburn'
+'speech personality project'
+'file for producing T-tests on data split by meta factors'
+
+import scipy.stats as stat
+import csv
+
+def Metatest(FeatureKeys, Data):
+	# List of dictionaries with all relevant values to an entry is recorded. These values need to be split according to different keys to 		produce sets for testing
+	f = open('/home/euan/Documents/university/year4/speech_personality/CSVs/Results/metaResults.csv', 'w')
+	a = csv.writer(f, delimiter = ',')
+	
+	a.writerow(['Feature', 'Gender', 'Role'])
+
+	for i in xrange(len(FeatureKeys)):
+		Gresult = Metarun('Gender', FeatureKeys[i], Data)
+		Rresult = Metarun('Role', FeatureKeys[i], Data)
+		a.writerow([FeatureKeys[i], Gresult, Rresult])
+
+	f.close()
+
+def Metarun(Meta, Feature, Data):
+
+	# For this corpus meta data willl only ever be split into two
+	option_1 = ''
+	option_2 = ''
+
+	# Determine what meta data is being used for split.
+	if Meta == 'Gender':
+		option_1 = 'F'
+		option_2 = 'M'
+	else:
+		option_1 = 'J'
+		option_2 = 'G'
+
+	option_1_set = []
+	option_2_set = []
+
+	# For each entry in the Data list
+	for i in xrange(len(Data)):
+		# Determine where the data of the feature being examined is to be stored based on the meta value
+		if Data[i][Meta] == option_1:
+			option_1_set.append(Data[i][Feature])
+		else:
+			option_2_set.append(Data[i][Feature])
+
+	# Now the data has been split into two distinct lists they can be put through a t test to test the hypothesis that there is no sigificant difference between them.
+
+	result = stat.ttest_ind(option_1_set, option_2_set)
+		
+	return format(result[1], 'f')
+	
