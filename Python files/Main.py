@@ -16,7 +16,7 @@ from ScoreTest import *
 filenames = getfilenames()
 
 # Run feature extraction configuration file on .wav files
-#FeatureExtract(filenames)
+FeatureExtract(filenames)
 
 # Extract contents of CSV files and assign values
 features = ExtractCSV()
