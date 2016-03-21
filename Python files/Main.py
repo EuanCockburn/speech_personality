@@ -11,12 +11,14 @@ from Meta_Extract import *
 from DictComb import *
 from MetaTest import *
 from ScoreTest import *
+from MetaVSPlot import *
+from ScoreVSPlot import *
 
 # Retrieve the names of all the .wav files
-filenames = getfilenames()
+#filenames = getfilenames()
 
 # Run feature extraction configuration file on .wav files
-FeatureExtract(filenames)
+#FeatureExtract(filenames)
 
 # Extract contents of CSV files and assign values
 features = ExtractCSV()
@@ -39,6 +41,10 @@ FeatureKeys = ['F0semitoneamean','F0semitonestddevNorm','F0semitonepercentile20'
 Metatest(FeatureKeys, Data)
 ScoreTest(FeatureKeys, Data)
 
-plotfeatures(features)
+#plotfeatures(features)
 
+# Plotting of features against methods of identifying groups
+
+#MetaVSplot('Gender', 'F0semitoneamean', Data)
+ScoreVSplot('Extraversion', 'Loudnessamean', Data)
 
