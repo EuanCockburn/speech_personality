@@ -11,7 +11,7 @@ def MetaVSplot(Meta, Feature, Data):
 	f = open('/home/euan/Documents/university/year4/speech_personality/Mean_results/' + Meta + '.csv', 'a')
 	a = csv.writer(f, delimiter = ',')
 
-	a.writerow(['Male or Female', 'Feature','Value'])
+	a.writerow(['Upper or Lower', 'Feature','Value'])
 
 	# For this corpus meta data willl only ever be split into two
 	option_1 = ""
@@ -37,8 +37,8 @@ def MetaVSplot(Meta, Feature, Data):
 		else:
 			option_2_set.append(Data[i][Feature])
 	
-	a.writerow(["Female", Feature, str(np.mean(option_1_set))])
-	a.writerow(["Male", Feature, str(np.mean(option_2_set))])
+	a.writerow(["Upper", Feature, str(np.mean(option_1_set))])
+	a.writerow(["Lower", Feature, str(np.mean(option_2_set))])
 
 	plt.figure()
 	plt.hist(option_1_set, bins=len(option_1_set)/10)

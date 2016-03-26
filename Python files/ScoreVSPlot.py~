@@ -3,9 +3,14 @@ __author__ = 'Euan Cockburn'
 'file for mapping feature against score'
 
 import matplotlib.pyplot as plt
+import numpy as np
+import csv
 
 def ScoreVSplot(Score, Feature, Data):
 	
+	f = open('/home/euan/Documents/university/year4/speech_personality/Mean_results' + Score + '.csv', 'a')
+	a = csv.writer(f, delimiter = ',')
+
 	# For this corpus meta data willl only ever be split into two
 	option_1 = []
 	option_2 = []
@@ -28,6 +33,9 @@ def ScoreVSplot(Score, Feature, Data):
 		elif Data[i][Score] <= median_value:
 			option_2.append(Data[i][Feature])
 
+	a.writerow(["Upper", Feature, str(np.mean(option_1))])
+	a.writerow(["Lower", Feature, str(np.mean(option_2))])
+
 	plt.figure()
 	plt.hist(option_1, bins=len(option_1)/10)
 	plt.hist(option_2, bins=len(option_2)/10)
@@ -35,6 +43,8 @@ def ScoreVSplot(Score, Feature, Data):
 	plt.xlabel(Feature)
 	plt.ylabel('occurances')
 	plt.savefig("/home/euan/Documents/university/year4/speech_personality/Plots/VSPlots/" + Feature + "_" + Score + "_Hist" + ".png")
+
+	f.close()
 
 	#plt.figure()
 	#i = 0
