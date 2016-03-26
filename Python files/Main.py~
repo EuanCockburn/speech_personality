@@ -45,7 +45,7 @@ ScoreTest(FeatureKeys, Data)
 
 # Plotting of features against methods of identifying groups
 
-#MetaVSplot('Gender', 'F0semitoneamean', Data)
+MetaVSplot('Gender', 'F0semitoneamean', Data)
 for entry in FeatureKeys:
 	ScoreVSplot('Extraversion', entry, Data)
 
